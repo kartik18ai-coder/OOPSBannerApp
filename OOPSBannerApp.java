@@ -47,8 +47,8 @@ public class OOPSBannerApp {
     }
 
     /**
-     * Main method to run the banner display
-     */
+      Main method to run the banner display
+     **/
     public static void main(String[] args) {
         // Step 1: Declare String Arrays and populate them by calling helper methods [cite: 573]
         String[] oPattern = getOPattern(); // Reused for both 'O's 
