@@ -20,4 +20,3 @@ public class OOPSBannerApp {
             System.out.println(line); 
         }
     }
-}
