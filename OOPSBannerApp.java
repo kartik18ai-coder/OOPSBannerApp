@@ -15,6 +15,7 @@ public class OOPSBannerApp {
         };
 
         // Use a for-each loop to print each line of the banner 
+        //
         for (String line : lines) {
             System.out.println(line); 
         }
