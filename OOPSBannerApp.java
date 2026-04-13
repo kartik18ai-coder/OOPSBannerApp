@@ -1,61 +1,28 @@
+// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
 public class OOPSBannerApp {
+   public OOPSBannerApp() {
+   }
 
-    // UC7: Static Inner Class for Encapsulation
-    private static class CharacterPatternMap {
-        private char character;
-        private String[] pattern;
+   public static String[] getOPattern() {
+      return new String[]{"  *  ", " * * ", " * * ", " * * ", " * * ", " * * ", "  *  "};
+   }
 
-        public CharacterPatternMap(char character, String[] pattern) {
-            this.character = character;
-            this.pattern = pattern;
-        }
+   public static String[] getPPattern() {
+      return new String[]{" **  ", " * * ", " * * ", " **  ", " **    ", " **    ", " **    "};
+   }
 
-        public String[] getPattern() {
-            return pattern;
-        }
-    }
+   public static String[] getSPattern() {
+      return new String[]{"  **  ", "**      ", " **     ", "   **   ", "     ** ", "    **  ", " **   "};
+   }
 
-    public static void main(String[] args) {
-        // Define patterns for O, P, and S
-        CharacterPatternMap charO = new CharacterPatternMap('O', new String[]{
-            "  *** ",
-            " * * ",
-            " * * ",
-            " * * ",
-            "  *** "
-        });
+   public static void main(String[] var0) {
+      String[] var1 = getOPattern();
+      String[] var2 = getPPattern();
+      String[] var3 = getSPattern();
 
-        CharacterPatternMap charP = new CharacterPatternMap('P', new String[]{
-            " **** ",
-            " * * ",
-            " **** ",
-            " * ",
-            " * "
-        });
+      for(int var4 = 0; var4 < var1.length; ++var4) {
+         System.out.println(" " + var1[var4] + " " + var1[var4] + "  " + var2[var4] + " " + var3[var4]);
+      }
 
-        CharacterPatternMap charS = new CharacterPatternMap('S', new String[]{
-            "  **** ",
-            " * ",
-            "  *** ",
-            "     * ",
-            " **** "
-        });
-
-        // Store them in an array to represent "OOPS"
-        CharacterPatternMap[] bannerOrder = {charO, charO, charP, charS};
-
-        // Display the banner horizontally
-        printBanner(bannerOrder);
-    }
-
-    private static void printBanner(CharacterPatternMap[] bannerOrder) {
-        // Assuming all characters have 5 rows for this UC
-        for (int i = 0; i < 5; i++) {
-            StringBuilder row = new StringBuilder();
-            for (CharacterPatternMap cp : bannerOrder) {
-                row.append(cp.getPattern()[i]).append("  "); // 2 spaces between letters
-            }
-            System.out.println(row.toString());
-        }
-    }
+   }
 }
